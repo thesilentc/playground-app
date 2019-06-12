@@ -2,7 +2,7 @@
 <% if flash[:notice] %>
 <div id="notice"><%= flash[:notice] %></div>
 <% end %>
-<% if @hosts.size == 0
+<% if @hosts.empty? 
     flash[:notice] = "You have no acitve Hosts...."
   end 
 %>

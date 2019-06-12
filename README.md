@@ -24,3 +24,15 @@ Things you may want to cover:
 * ...
 
 ```ruby on rails```
+
+button for hosts
+<br>
+    <%= f.label :status %>
+    <%= f.radio_button :status, "active", checked: true %>
+    <%= f.label :status_active, "Active" %>
+
+    <%= f.radio_button :status, "deactive" %>
+    <%= f.label :status_inactive, "Deactive" %>
+
+    <br>
+    <br>

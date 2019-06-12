@@ -4,8 +4,10 @@ class HostsController < ApplicationController
   
     def index    
       if current_user.admin
+        #binding.pry
         @users = User.where(admin: false)  
         @hosts = Host.all    
+   #binding.pry
       else 
         @users = User.where(id: current_user.id)
        # @hosts = Host.all.status
@@ -22,6 +24,7 @@ class HostsController < ApplicationController
   
     def create 
       @host = Host.new(host_params)
+      binding.pry
       if @host.save
         flash[:notice] = "Successfully created Host."
         redirect_to @host
